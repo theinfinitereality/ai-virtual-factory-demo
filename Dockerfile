@@ -8,7 +8,8 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY index.html /usr/share/nginx/html/
 COPY styles.css /usr/share/nginx/html/
 COPY js/ /usr/share/nginx/html/js/
-COPY reference/Ai-Retail-Demo-Nissan/sdk/ /usr/share/nginx/html/reference/Ai-Retail-Demo-Nissan/sdk/
+COPY sdk/ /usr/share/nginx/html/sdk/
+COPY textures/ /usr/share/nginx/html/textures/
 
 # Expose port 8080
 EXPOSE 8080
