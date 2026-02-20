@@ -1,0 +1,64 @@
+# Reference files (examples only - may contain sensitive data)
+reference/
+
+# Scripts folder (contains API keys)
+scripts/
+
+# Dependencies
+node_modules/
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg-info/
+.eggs/
+venv/
+
+# Environment
+.env
+.env.local
+.env.*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Docker (local development only)
+docker-compose.yml
+
+# Development files
+setup.sh
+*.md
+!README.md
+
+# Large texture files (use 2K JPG versions instead)
+textures/*_4k.png
+textures/*_height_*.jpg
+textures/*_metallic_*.jpg
+textures/*_emissive_*.jpg
+textures/*_normal_dx_*.jpg
+textures/concrete_*.jpg
+

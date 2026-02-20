@@ -1,0 +1,32 @@
+{
+  "name": "virtual-factory-ai-assistant",
+  "version": "1.0.0",
+  "description": "AI-powered factory monitoring and operations assistant with real-time 3D visualization",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "docker:build": "docker build -t virtual-factory .",
+    "docker:run": "docker-compose up -d",
+    "docker:stop": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "setup": "./setup.sh",
+    "register-function": "python3 scripts/register_factory_function.py",
+    "update-prompt": "python3 scripts/update_factory_avatar_prompt.py"
+  },
+  "keywords": [
+    "ai",
+    "factory",
+    "monitoring",
+    "threejs",
+    "napster-spaces",
+    "industrial",
+    "iot",
+    "demo"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/virtual-factory-ai-assistant"
+  }
+}
+

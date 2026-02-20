@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Factory - AI Assistant Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Full page loading overlay -->
+    <div class="app-loading-overlay" id="app-loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Initializing AI Factory Simulation</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Left Side: Dashboard + 3D Scene -->
+        <div class="left-panel">
+            <!-- Telemetry Dashboard -->
+            <div class="dashboard-section">
+                <div class="dashboard-header">
+                    <h1>Virtual Factory - Welding Station</h1>
+                    <div class="status-indicators">
+                        <div class="beacon-container">
+                            <div class="beacon" id="beacon"></div>
+                            <span class="beacon-label" id="beacon-label">NORMAL</span>
+                        </div>
+                        <div class="stability-display">
+                            <span class="stability-label">STABILITY</span>
+                            <span class="stability-value" id="stability-score">100</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sensor Charts -->
+                <div class="charts-row">
+                    <div class="chart-card" id="power-card">
+                        <div class="chart-header">
+                            <span class="chart-title">Power</span>
+                            <span class="chart-value" id="power-value">47.0 kW</span>
+                        </div>
+                        <canvas id="power-chart"></canvas>
+                    </div>
+                    <div class="chart-card" id="pressure-card">
+                        <div class="chart-header">
+                            <span class="chart-title">Pressure</span>
+                            <span class="chart-value" id="pressure-value">147.5 bar</span>
+                        </div>
+                        <canvas id="pressure-chart"></canvas>
+                    </div>
+                    <div class="chart-card" id="temperature-card">
+                        <div class="chart-header">
+                            <span class="chart-title">Oil Temp</span>
+                            <span class="chart-value" id="temperature-value">60.0 °C</span>
+                        </div>
+                        <canvas id="temperature-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Three.js Scene -->
+            <div class="scene-container" id="scene-container">
+                <div id="threejs-canvas"></div>
+                <div class="scene-hint">Drag to rotate • Scroll to zoom</div>
+            </div>
+        </div>
+
+        <!-- Right Side: Operator Panel with AI -->
+        <div class="operator-panel" id="operator-panel">
+            <!-- AI Avatar Section -->
+            <div class="panel-section avatar-section">
+                <div class="section-header">
+                    <h3>AI Factory Assistant</h3>
+                </div>
+                <div class="avatar-container" id="avatar-container">
+                    <div id="avatar-sdk-container"></div>
+                    <div class="loading-overlay" id="loading-overlay">
+                        <div class="spinner"></div>
+                        <div class="loading-text">Loading AI Assistant...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Log Section -->
+            <div class="panel-section messages-section">
+                <div class="section-header">
+                    <h3>Action Log</h3>
+                </div>
+                <div class="messages-feed" id="messages-feed">
+                    <div class="message-item system">
+                        <div class="message-time">System Ready</div>
+                        <div class="message-text">Ask the AI about sensors or request actions.</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Chart.js for sensor charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    
+    <!-- Napster Spaces SDK -->
+    <link rel="stylesheet" href="reference/Ai-Retail-Demo-Nissan/sdk/napster-spaces-sdk.css">
+    <script src="reference/Ai-Retail-Demo-Nissan/sdk/napster-spaces-sdk.umd.js"></script>
+    
+    <!-- Application Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/simulation.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/scene.js"></script>
+    <script src="js/ai-integration.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
+
